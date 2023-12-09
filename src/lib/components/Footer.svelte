@@ -86,9 +86,26 @@
 
 /* ============== FOOTER START ============== */
 
-footer{
-    padding: 3em;
+footer {
+  padding: 20px 0;
+  animation: bounce 2s ease-in-out infinite;
 }
+
+@keyframes bounce {
+  0% {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  50% {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  100% {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 
 footer ul {
     list-style-type: none;
