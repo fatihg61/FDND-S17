@@ -1,5 +1,47 @@
+<!-- Ballpit.svelte -->
 <script>
-</script>
+  import { onMount } from 'svelte';
+
+let balls = [];
+
+function createBall() {
+  const newBall = {
+    top: Math.random() * 80 + 'vh',
+    left: Math.random() * 80 + 'vw',
+    color: ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f'][Math.floor(Math.random() * 4)]
+  };
+
+  balls = [...balls, newBall];
+  animateBall(newBall);
+}
+
+function animateBall(newBall) {
+  const speed = Math.random() * 3 + 1;
+  const directionX = Math.random() < 0.5 ? -1 : 1;
+  const directionY = Math.random() < 0.5 ? -1 : 1;
+
+  const interval = setInterval(() => {
+    newBall.left = parseFloat(newBall.left) + directionX * speed + 'vw';
+    newBall.top = parseFloat(newBall.top) + directionY * speed + 'vh';
+
+    if (
+      parseFloat(newBall.top) < -5 ||
+      parseFloat(newBall.top) > 85 ||
+      parseFloat(newBall.left) < -5 ||
+      parseFloat(newBall.left) > 85
+    ) {
+      balls = balls.filter((b) => b !== newBall);
+      clearInterval(interval);
+    }
+  }, 280);
+}
+
+onMount(() => {
+  setInterval(() => {
+    createBall();
+  }, 50);
+});
+  </script>
 
 <footer>
     <div class="footer-container">
@@ -79,16 +121,34 @@
                 </a>
             </li>
         </ul>
+        {#each balls as ball}
+        <div class="ball" style="top: {ball.top}; left: {ball.left}; background-color: {ball.color}"></div>
+        {/each}
     </div>
 </footer>
 
 <style>
 
+
+
 /* ============== FOOTER START ============== */
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .footer-container {
+    position: relative;
+    height: 200px; /* Adjust height based on your design */
+    overflow: hidden;
+  }
 
 footer {
   padding: 20px 0;
-  animation: bounce 2s ease-in-out infinite;
+  animation: bounce 1s ease-in-out infinite;
 }
 
 @keyframes bounce {
@@ -140,7 +200,7 @@ footer a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 5em 6em 0em 6em;
+    padding: 0em 6em 0em 6em;
     align-items: end;
     justify-content: space-between;
 }
