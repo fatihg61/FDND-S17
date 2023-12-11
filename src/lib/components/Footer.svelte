@@ -39,7 +39,7 @@ function animateBall(newBall) {
 onMount(() => {
   setInterval(() => {
     createBall();
-  }, 50);
+  }, 10);
 });
   </script>
 
