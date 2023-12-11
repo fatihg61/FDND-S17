@@ -41,7 +41,7 @@ onMount(() => {
     createBall();
   }, 10);
 });
-  </script>
+</script>
 
 <footer>
     <div class="footer-container">
@@ -133,22 +133,29 @@ onMount(() => {
 
 /* ============== FOOTER START ============== */
 .ball {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .footer-container {
-    position: relative;
-    height: 200px; /* Adjust height based on your design */
-    overflow: hidden;
-  }
+position: absolute;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+transition: all 0.3s ease-in-out;
+}
 
 footer {
-  padding: 20px 0;
-  animation: bounce 1s ease-in-out infinite;
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+color: white;
+padding: 20px;
+padding: 20px 0;
+animation: bounce 1s ease-in-out infinite;
+}
+
+.footer-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 @keyframes bounce {
@@ -166,129 +173,127 @@ footer {
   }
 }
 
-
 footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+list-style-type: none;
+margin: 0;
+padding: 0;
 }
 
 .link-container {
-    height: 3.5em;
-    width: 15em;
-    line-height: 1;
-    cursor: pointer;
+height: 3.5em;
+width: 15em;
+line-height: 1;
+cursor: pointer;
 }
 
 footer a {
-    text-decoration: none;
-    color: var(--justWhite);
-    font-family: var(--paragraph-font);
-    text-transform: uppercase;
-    font-size: 2em;
-    display: inline-block;
-    transition: .2s;
+text-decoration: none;
+color: var(--justWhite);
+font-family: var(--paragraph-font);
+text-transform: uppercase;
+font-size: 2em;
+display: inline-block;
+transition: .2s;
 }
 
 .link-container:hover a {
-    font-size: 2.2rem;
-    line-height: .8;
-    color: var(--candelLight);
+font-size: 2.2rem;
+line-height: .8;
+color: var(--candelLight);
 }
 
 .footer-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0em 6em 0em 6em;
-    align-items: end;
-    justify-content: space-between;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+padding: 0em 6em 0em 6em;
+align-items: end;
+justify-content: space-between;
 }
 
 footer menu {
-    display: flex;
-    flex-direction: row;
+display: flex;
+flex-direction: row;
 }
 
 
 .contact-info a {
-    font-family: var(--copy-font);
-    font-size: 1em;
-    font-weight: 200;
-    line-height: 1em;
-    transition: .2s;
+font-family: var(--copy-font);
+font-size: 1em;
+font-weight: 200;
+line-height: 1em;
+transition: .2s;
 }
 
 .contact-info a:hover {
-    color: var(--candelLight);
+color: var(--candelLight);
 }
 
 .social-icons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: 10% 0;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+margin: 10% 0;
 }
 
 .sponsor-button {
-    text-decoration: none;
-    background-color: var(--plantGreen);
-    color: var(--justWhite);
-    font-family: var(--copy-font);
-    font-weight: bold;
-    border: none;
-    border-radius: 3em;
-    padding: 1em 2em;
-    text-transform: uppercase;
-    transition: .2s;
-    cursor: pointer;
+text-decoration: none;
+background-color: var(--plantGreen);
+color: var(--justWhite);
+font-family: var(--copy-font);
+font-weight: bold;
+border: none;
+border-radius: 3em;
+padding: 1em 2em;
+text-transform: uppercase;
+transition: .2s;
+cursor: pointer;
 }
 
 .sponsor-button:hover {
-    background-color: var(--candelLight);
+background-color: var(--candelLight);
 }
 
 .sponsor-icon path{
-    stroke: currentColor;
-    fill: currentColor;
-    color: var(--justWhite);
+stroke: currentColor;
+fill: currentColor;
+color: var(--justWhite);
 }
 
 #footer-sponsor-button {
-    font-weight: bold;
+font-weight: bold;
 }
 
 #footer-sponsor-button:hover {
-    color: var(--charcoal);
+color: var(--charcoal);
 }
 
-
 .sponsor-button:hover svg {
-    transform: translateY(1px) translateX(3px);
+transform: translateY(1px) translateX(3px);
 }
 
 .sponsor-button svg {
-    transform: translateY(1px);
+transform: translateY(1px);
 }
 
 footer svg {
-    cursor: pointer;
-    transition: .2s;
+cursor: pointer;
+transition: .2s;
 }
 
 footer svg:hover {
-    opacity: 50%;
+opacity: 50%;
 }
 
 /* ============== FOOTER END ============== */
 
 @media (min-width: 1200px) {
 
-    .footer-navbar{
-    display: flex
-    }
+.footer-navbar{
+display: flex
+}
 
 }
 </style>
