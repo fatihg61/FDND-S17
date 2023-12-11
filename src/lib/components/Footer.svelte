@@ -1,4 +1,3 @@
-<!-- Ballpit.svelte -->
 <script>
   import { onMount } from 'svelte';
 
@@ -39,25 +38,27 @@ function animateBall(newBall) {
 onMount(() => {
   setInterval(() => {
     createBall();
-  }, 10);
+  }, 100);
 });
 </script>
 
 <footer>
     <div class="footer-container">
-        <menu>
-            <li class="footer-navbar">
-                <div class="link-container">
-                    <li><a href="/">Home</a></li>
-                </div>
-                <div class="link-container">
-                    <li><a href="/about">About</a></li>
-                </div>
-                <div class="link-container">
-                    <li><a href="/promise">Promise</a></li>
-                </div>
-            </li>
-        </menu>
+      <!-- Container for the a href to other pages -->
+      <menu>
+        <li class="footer-navbar" role="navigation">
+          <div class="link-container">
+            <li><a href="/" aria-label="Go to the home page"><span>Home</span></a></li>
+          </div>
+          <div class="link-container">
+            <li><a href="/about" aria-label="Learn more about us"><span>About</span></a></li>
+          </div>
+          <div class="link-container">
+            <li><a href="/promise" aria-label="Read our commitment to you"><span>Promise</span></a></li>
+          </div>
+        </li>
+      </menu>
+      <!-- Contact info and social-icons -->
         <ul class="contact-info">
             <li><a href="tel:+31 20 1234679">+31 20 1234679</a></li>
             <li><a href="mailto:info@ink.org">info@ink.org</a></li>
@@ -121,6 +122,7 @@ onMount(() => {
                 </a>
             </li>
         </ul>
+        <!-- Ballpit -->
         {#each balls as ball}
         <div class="ball" style="top: {ball.top}; left: {ball.left}; background-color: {ball.color}"></div>
         {/each}
@@ -128,16 +130,13 @@ onMount(() => {
 </footer>
 
 <style>
-
-
-
-/* ============== FOOTER START ============== */
+/* Ballpit CSS */
 .ball {
 position: absolute;
 width: 20px;
 height: 20px;
 border-radius: 50%;
-transition: all 0.3s ease-in-out;
+transition: all 1.3s ease-in-out;
 }
 
 footer {
@@ -148,7 +147,7 @@ width: 100%;
 color: white;
 padding: 20px;
 padding: 20px 0;
-animation: bounce 1s ease-in-out infinite;
+animation: bounce 10s ease-in-out infinite;
 }
 
 .footer-container {
@@ -156,8 +155,13 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+flex-direction: row;
+flex-wrap: wrap;
+padding: 0em 6em 0em 6em;
+justify-content: space-between;
 }
 
+/* Bubblegum effect */
 @keyframes bounce {
   0% {
     padding-top: 0;
@@ -202,20 +206,10 @@ line-height: .8;
 color: var(--candelLight);
 }
 
-.footer-container {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-padding: 0em 6em 0em 6em;
-align-items: end;
-justify-content: space-between;
-}
-
 footer menu {
 display: flex;
 flex-direction: row;
 }
-
 
 .contact-info a {
 font-family: var(--copy-font);
@@ -287,10 +281,8 @@ footer svg:hover {
 opacity: 50%;
 }
 
-/* ============== FOOTER END ============== */
 
 @media (min-width: 1200px) {
-
 .footer-navbar{
 display: flex
 }
