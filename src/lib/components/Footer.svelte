@@ -38,7 +38,7 @@ function animateBall(newBall) {
 onMount(() => {
   setInterval(() => {
     createBall();
-  }, 100);
+  }, 10);
 });
 </script>
 
@@ -136,7 +136,7 @@ position: absolute;
 width: 20px;
 height: 20px;
 border-radius: 50%;
-transition: all 1.3s ease-in-out;
+transition: all 0.3s ease-in-out;
 }
 
 footer {
@@ -147,7 +147,7 @@ width: 100%;
 color: white;
 padding: 20px;
 padding: 20px 0;
-animation: bounce 10s ease-in-out infinite;
+animation: bounce 0.75s ease-in-out infinite;
 }
 
 .footer-container {
