@@ -6,7 +6,7 @@
 <Header />
 
 <main>
-  <h4 class="h4">Angry Ballpit Bubblegum Footer</h4>
+  <!-- <h4 class="h4">Angry Ballpit Bubblegum Footer</h4> -->
 </main>
 
 <Footer />
