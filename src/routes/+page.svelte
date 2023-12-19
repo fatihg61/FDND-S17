@@ -6,7 +6,8 @@
 <Header />
 
 <main>
-  <!-- <h4 class="h4">Angry Ballpit Bubblegum Footer</h4> -->
+  <!-- <h4 class="h4">Week 1: Angry Ballpit Bubblegum Footer</h4>
+  <h4 class="h4">Week 2: Insane fastfood chique fullscreen menu</h4> -->
 </main>
 
 <Footer />
@@ -17,16 +18,17 @@
     box-sizing: border-box;
   }
 
-  .h4 {
+  /* .h4 {
     position: relative;
     text-align: center;
-    font-size: 5vw; /* Responsive font size */
+    font-size: 2vw; /* Responsive font size */
+    /* margin: 3px;
     color: #1F1919;
     background-color: #ff9999;
     border-radius: 5px;
     padding: 10px;
     animation: bounce 2s infinite ease-in-out;
-  }
+  } */ 
 
   @keyframes bounce {
     0%, 100% {

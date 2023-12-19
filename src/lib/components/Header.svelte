@@ -3,24 +3,25 @@
 </script>
 
 <header>
-    <input type="checkbox" id="toggle" style="display:none;" />
-    <label class="toggle-btn toggle-btn__cross" for="toggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </label>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact me</a></li>
-      </ul>
-    </nav>
-    <div class="logo">
-      <img src="" alt="Your logo">
-    </div>
+	<input type="checkbox" id="toggle" style="display:none;" />
+	<label class="toggle-btn toggle-btn__cross" for="toggle">
+	  <div class="bar"></div>
+	  <div class="bar"></div>
+	  <div class="bar"></div>
+	</label>
+	<nav>
+	  <ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Contact me</a></li>
+	  </ul>
+	</nav>
+	<div class="logo">
+	  <img src="$lib/img/inkheader.png" alt="INK" />
+	</div>
   </header>
+  
 
 <style>
 
@@ -33,32 +34,25 @@
 	 font-family: "Roboto", "Helvetica", "sans-serif";
 	 color: #555;
 }
- body {
-	 margin: 0;
-	 padding: 0;
-	 background-color: #151b1d;
-}
- main {
-	 min-width: 200px;
-	 max-width: 800px;
-	 margin: 80px auto;
-	 padding: 10px;
-}
- main .wrap {
-	 padding: 40px 20px;
-	 background-color: #fff;
-}
- main .title {
-	 font-size: 2em;
-	 text-align: center;
-	 margin: 20px auto 40px;
-	 text-transform: uppercase;
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Adjust padding as needed */
+  /* Other styles for header */
 }
 
 .logo {
+  flex-grow: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  /* Other styles for the logo image */
 }
 
  header nav {
