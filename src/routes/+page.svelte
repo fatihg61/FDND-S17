@@ -204,24 +204,97 @@ h4 {
   fill: var(--justWhite);
 }
 
-/* MEDIA QUERY 600PX */
-@media only screen and (max-width: 600px) {
+
+/* MEDIA QUERY FOR tablet */
+@media only screen and (max-width: 1100px) {
   section {
-    padding: 0 3vw; /* Adjusted padding for smaller screens */
+    padding: 0 1em; /* Adjusted padding for smaller screens */
   }
 
-  /* Additional mobile-specific styles can be added here */
-  h2 {
-    font-size: 2.5em; /* Decreased font size for better mobile readability */
+  .sponsorpage-wrapper {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    height: auto; /* Allow the height to adjust based on content */
+  }
+
+  .sponsoroptions {
+    width: 100%; /* Occupy full width on mobile */
+    margin: 10px 0; /* Add margin between stacked items */
+    position: relative; /* Ensure relative positioning */
   }
 
   .options-text-wrapper {
-    left: 5%; /* Adjusted position for better alignment on mobile */
-    width: 90%; /* Increased width for better mobile layout */
+    position: absolute; /* Position text within each sponsor option */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+    width: 90%; /* Adjusted width */
+    text-align: center; /* Center text */
   }
 
+  .sponsoroptions h4,
+  .sponsoroptions p {
+    text-align: center; /* Center text on mobile */
+    margin-bottom: 10px; /* Add spacing between elements */
+  }
+
+  /* Adjustments for buttons and their SVG icons */
   .sponsor-button {
     padding: 0.8em 1.5em; /* Smaller padding for better mobile appearance */
+    display: block; /* Display buttons as block elements for stacking */
+    margin: 10px auto; /* Center buttons */
+  }
+
+  .sponsor-button svg {
+    vertical-align: middle; /* Center SVG icon vertically with text */
+    margin-left: 5px; /* Add spacing between text and icon */
+  }
+}
+
+
+/* MEDIA QUERY FOR MOBILE */
+@media only screen and (max-width: 600px) {
+  section {
+    padding: 0 1em; /* Adjusted padding for smaller screens */
+  }
+
+  .sponsorpage-wrapper {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    height: auto; /* Allow the height to adjust based on content */
+  }
+
+  .sponsoroptions {
+    width: 100%; /* Occupy full width on mobile */
+    margin: 10px 0; /* Add margin between stacked items */
+    position: relative; /* Ensure relative positioning */
+  }
+
+  .options-text-wrapper {
+    position: absolute; /* Position text within each sponsor option */
+    top: 46%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering trick */
+    width: 90%; /* Adjusted width */
+    text-align: center; /* Center text */
+  }
+
+  .sponsoroptions h4,
+  .sponsoroptions p {
+    text-align: left; /* Center text on mobile */
+    margin-bottom: 10px; /* Add spacing between elements */
+    margin-left: 30px;
+  }
+
+  /* Adjustments for buttons and their SVG icons */
+  .sponsor-button {
+    padding: 0.8em 1.5em; /* Smaller padding for better mobile appearance */
+    display: block; /* Display buttons as block elements for stacking */
+    margin: 10px auto; /* Center buttons */
+    margin-left: 30px;
+  }
+
+  .sponsor-button svg {
+    vertical-align: middle; /* Center SVG icon vertically with text */
+    margin-left: 5px; /* Add spacing between text and icon */
   }
 }
 
