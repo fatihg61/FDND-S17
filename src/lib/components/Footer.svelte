@@ -1,51 +1,51 @@
 <script>
-  import { onMount } from 'svelte';
+//   import { onMount } from 'svelte';
 
-let balls = [];
+// let balls = [];
 
-function createBall() {
-  const newBall = {
-    top: Math.random() * 80 + 'vh',
-    left: Math.random() * 80 + 'vw',
-    color: ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f'][Math.floor(Math.random() * 4)]
-  };
+// function createBall() {
+//   const newBall = {
+//     top: Math.random() * 80 + 'vh',
+//     left: Math.random() * 80 + 'vw',
+//     color: ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f'][Math.floor(Math.random() * 4)]
+//   };
 
-  balls = [...balls, newBall];
-  animateBall(newBall);
-}
+//   balls = [...balls, newBall];
+//   animateBall(newBall);
+// }
 
-function animateBall(newBall) {
-  const speed = Math.random() * 3 + 1;
-  const directionX = Math.random() < 0.5 ? -1 : 1;
-  const directionY = Math.random() < 0.5 ? -1 : 1;
+// function animateBall(newBall) {
+//   const speed = Math.random() * 3 + 1;
+//   const directionX = Math.random() < 0.5 ? -1 : 1;
+//   const directionY = Math.random() < 0.5 ? -1 : 1;
 
-  const interval = setInterval(() => {
-    newBall.left = parseFloat(newBall.left) + directionX * speed + 'vw';
-    newBall.top = parseFloat(newBall.top) + directionY * speed + 'vh';
+//   const interval = setInterval(() => {
+//     newBall.left = parseFloat(newBall.left) + directionX * speed + 'vw';
+//     newBall.top = parseFloat(newBall.top) + directionY * speed + 'vh';
 
-    if (
-      parseFloat(newBall.top) < -5 ||
-      parseFloat(newBall.top) > 85 ||
-      parseFloat(newBall.left) < -5 ||
-      parseFloat(newBall.left) > 85
-    ) {
-      balls = balls.filter((b) => b !== newBall);
-      clearInterval(interval);
-    }
-  }, 280);
-}
+//     if (
+//       parseFloat(newBall.top) < -5 ||
+//       parseFloat(newBall.top) > 85 ||
+//       parseFloat(newBall.left) < -5 ||
+//       parseFloat(newBall.left) > 85
+//     ) {
+//       balls = balls.filter((b) => b !== newBall);
+//       clearInterval(interval);
+//     }
+//   }, 280);
+// }
 
-onMount(() => {
-  setInterval(() => {
-    createBall();
-  }, 100);
-});
+// onMount(() => {
+//   setInterval(() => {
+//     createBall();
+//   }, 100);
+// });
 </script>
 
 <footer>
-    <div class="footer-container">
+    <!-- <div class="footer-container"> -->
       <!-- Container for the a href to other pages -->
-      <menu>
+      <!-- <menu>
         <li class="footer-navbar" role="navigation">
           <div class="link-container">
             <li><a href="/" aria-label="Go to the home page"><span>Home</span></a></li>
@@ -57,9 +57,9 @@ onMount(() => {
             <li><a href="/promise" aria-label="Read our commitment to you"><span>Promise</span></a></li>
           </div>
         </li>
-      </menu>
+      </menu> -->
       <!-- Contact info and social-icons -->
-        <ul class="contact-info">
+        <!-- <ul class="contact-info">
             <li><a href="tel:+31 20 1234679">+31 20 1234679</a></li>
             <li><a href="mailto:info@ink.org">info@ink.org</a></li>
             <li>
@@ -121,17 +121,17 @@ onMount(() => {
                     </svg>
                 </a>
             </li>
-        </ul>
+        </ul> -->
         <!-- Ballpit -->
-        {#each balls as ball}
+        <!-- {#each balls as ball}
         <div class="ball" style="top: {ball.top}; left: {ball.left}; background-color: {ball.color}"></div>
         {/each}
-    </div>
+    </div> -->
 </footer>
 
 <style>
 /* Ballpit CSS */
-.ball {
+/* .ball {
 position: absolute;
 width: 20px;
 height: 20px;
@@ -159,10 +159,10 @@ flex-direction: row;
 flex-wrap: wrap;
 padding: 0em 6em 0em 6em;
 justify-content: space-between;
-}
+} */
 
 /* Bubblegum effect */
-@keyframes bounce {
+/* @keyframes bounce {
   0% {
     padding-top: 0;
     padding-bottom: 0;
@@ -287,5 +287,5 @@ opacity: 50%;
 display: flex
 }
 
-}
+} */
 </style>
