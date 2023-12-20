@@ -43,5 +43,5 @@ main{
 }
 
 h1,h2 {
-    font-family: 'Kirang Haerang';
+    font-family: var(--copy-font);
 }
