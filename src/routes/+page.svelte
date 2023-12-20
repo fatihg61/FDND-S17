@@ -22,12 +22,13 @@
                 <p class="black">Sponsor football materials, change the Game! Your generous donation can provide crucial equipment to aspiring athletes. 
                   <br>
                   Help us make a difference today.</p>
-                <button class="sponsor-button sponsor-page-button green">
-                    Choose sponsor 
+                  <a href="/payment">
+                    <button class="sponsor-button sponsor-page-button green">
+                      Choose sponsor
+                  </a>
                     <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.1417 0.25L0 1.48375L3.7085 5.5L0 9.51625L1.1417 10.75L6 5.5L1.1417 0.25Z" fill=""/>
                     </svg>
-                </button>
             </div>
         </div>
         <div class="sponsoroptions financial">
