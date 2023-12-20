@@ -192,18 +192,18 @@ h4 {
   color: var(--charcoal);
 }
 
-.green svg {
+/* .green svg {
   fill: var(--charcoal);
-}
+} */
 
 .green:hover {
   background-color: var(--pictonBlue);
   color: var(--justWhite);
 }
 
-.green:hover svg {
+/* .green:hover svg {
   fill: var(--justWhite);
-}
+} */
 
 
 /* MEDIA QUERY FOR tablet */

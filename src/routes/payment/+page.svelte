@@ -49,7 +49,12 @@
                     <input type="number" class="inputbox" name="amount" id="amount" required />
                 </div>
                 <p></p>
-                <button type="submit" class="button">CheckOut</button>
+                <form action="/paymentgood" method="get">
+                    <button type="submit" class="button">
+                     CheckOut
+                    </button>
+                  </form>
+                  
             </form>
         </div>
     </div>
@@ -193,11 +198,6 @@ p {
 /* Styling for Valid Input */
 .inputbox:valid {
     border-bottom-color: green; /* Change border color on valid input */
-}
-
-/* Additional styling for the dollar sign */
-.inputbox + span {
-    color: green; /* Change color of dollar sign on valid input */
 }
 
 </style>
