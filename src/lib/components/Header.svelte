@@ -11,27 +11,27 @@
 	</label>
 	<nav>
 	  <ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Blog</a></li>
-		<li><a href="#">Contact me</a></li>
+		<li><a href="/">Home</a></li>
+		<li><a href="/">About</a></li>
+		<li><a href="/">Promise</a></li>
+		<li><a href="/">Sponsor</a></li>
+		<li><a href="/">Contact</a></li>
+		<li><a href="/">FAQ</a></li>
 	  </ul>
 	</nav>
 	<div class="logo">
-	  <img src="$lib/img/inkheader.png" alt="INK" />
+		<img src="./inkheader.png" alt="INK" />
 	</div>
-  </header>
-  
+  </header>  
 
 <style>
-
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
  :root {
 	 font-size: 16px;
 }
+
  * {
 	 box-sizing: border-box;
-	 font-family: "Roboto", "Helvetica", "sans-serif";
+	 font-family: var(--Apercu-Font);
 	 color: #555;
 }
 
@@ -50,7 +50,7 @@ header {
 }
 
 .logo img {
-  max-width: 100%;
+  width: clamp(25px, 8vw, 65px);
   height: auto;
   /* Other styles for the logo image */
 }
@@ -92,7 +92,7 @@ header {
 	 text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 }
  header nav ul li a:hover {
-	 color: #e84a5f;
+	 color: var(--candelLight);
 }
  .toggle-btn {
 	 display: block;

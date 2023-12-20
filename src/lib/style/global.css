@@ -3,7 +3,6 @@
 
 * {
     box-sizing: border-box;
-
     list-style: none;
     margin: 0;
     padding: 0;
@@ -35,7 +34,6 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-
     overflow-y: scroll; 
     overflow-x: scroll;
 }
