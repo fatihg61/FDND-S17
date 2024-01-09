@@ -1,89 +1,89 @@
 <script>
+        // Code to handle redirection after 5 seconds
+        setTimeout(() => window.location.href = "/", 5000);
 </script>
   
-<main>
+<main class="payment-success">
     <div class="container">
-        <div class="heading">
-            <div class="tick-container">
-                <i class="tick"></i>
-            </div>
-            <span>Your payment is successful</span>
+      <div class="heading">
+        <div class="tick-container">
+          <i class="tick fas fa-check-circle text-green"></i>
         </div>
-        <div class="text-container">
-            <div>
-                <p>You will be logged out of all devices except this one.</p>
-            </div>
-            <div>You will be redirected to the website in 5 seconds.</div>
-            <div>Click the button below if you are not redirected to the website.</div>
-            <a class="primary-button" href="/">Go to Website</a>
-        </div>
+        <span class="heading-text">Your payment is successful!</span>
+      </div>
+
+      <div class="text-container">
+        <p>You will be logged out of all devices except this one.</p>
+        <p>You will be redirected to the website in 5 seconds.</p>
+        <p>If you are not redirected, click the button below.</p>
+
+        <a href="/" class="primary-button button">Go to Website</a>
+      </div>
     </div>
-</main>
+
+  </main>
   
 <style>
-/* Your CSS styles */
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-    font-family: sans-serif;
+main {
+    background-color: #2196f3;    
 }
 
-main{
-    margin: 0;
-    text-align: center;
-    font-family: sans-serif;
+.payment-success {
+  background-color: #2196f3;
+  color: #fff;
+  text-align: center;
+  font-family: sans-serif;
 }
 
 .container {
-    color: #fff;
-    margin: auto;
-    padding: 32px 16px 16px;
+  padding: 32px 0 48px;
 }
 
 .heading {
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 32px;
+  font-size: 2.4rem;
+  margin-bottom: 32px;
+}
+
+.heading-text {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 16px;
 }
 
 .tick-container {
-    padding: 20px;
-    border-radius: 100px;
-    height: 56px;
-    width: 56px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    margin-bottom: 12px;
+  padding: 24px;
+  border-radius: 50px;
+  height: 64px;
+  width: 64px;
+  background-color: #fff;
+  margin-bottom: 12px;
 }
 
 .tick {
-    display: inline-block;
-    transform: rotate(45deg);
-    height: 36px;
-    width: 18px;
-    border-bottom: solid 3px #2196f3;
-    border-right: solid 3px #2196f3;
-    margin-bottom: 8px;
+  display: block;
+  transform: rotate(45deg);
+  height: 36px;
+  width: 18px;
+  border-bottom: solid 6px #fff;
+  border-right: solid 6px #fff;
+  margin-bottom: 8px;
 }
 
 .text-container {
-    line-height: 1.8em;
+  line-height: 1.8em;
+  margin-bottom: 48px;
 }
 
 .primary-button {
-    color: #2196f3;
-    background-color: #fff;
-    padding: 12px 16px;
-    display: inline-block;
-    margin-top: 32px;
-    border-radius: 6px;
-    text-decoration: none;
-    text-transform: uppercase;
+  background-color: #fff;
+  color: #2196f3;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 </style>

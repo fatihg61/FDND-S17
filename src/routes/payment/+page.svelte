@@ -58,10 +58,10 @@
             </form>
         </div>
     </div>
-  </div>   
 </main>
 
 <style>
+
 /* Main Screen Layout */
 .mainscreen {
     min-height: 100vh;
