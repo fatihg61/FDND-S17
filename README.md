@@ -38,9 +38,15 @@ You can preview the production build with `npm run preview`.
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
 Bronnen:
-Bard.AI
-Codepen
-Google
-Pinterest 
-MDN
-FDND
+
+Bubblegum: https://css-tricks.com/making-css-animations-feel-natural/
+
+Blackbox: https://g.co/bard/share/710eef920f8d writed the code for ballpit
+
+Codepen: for inspiration https://codepen.io/search/pens?q=ballpit
+
+Google: For the moodboard
+
+Pinterest: For the moodboard
+
+FDND: Talks for Creative coding
