@@ -208,50 +208,48 @@ h4 {
 } */
 
 
-/* MEDIA QUERY FOR tablet */
-@media only screen and (max-width: 1100px) {
-  section {
-    padding: 0 1em; /* Adjusted padding for smaller screens */
-  }
-
+/* MEDIA QUERY FOR TABLET */
+@media only screen and (max-width: 1050px) {
   .sponsorpage-wrapper {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    height: auto; /* Allow the height to adjust based on content */
+    flex-direction: column; /* Stack items vertically on tablets */
   }
 
   .sponsoroptions {
-    width: 100%; /* Occupy full width on mobile */
-    margin: 10px 0; /* Add margin between stacked items */
-    position: relative; /* Ensure relative positioning */
+    width: 100%;
+    margin: 20px 0; /* Increased margin for better spacing */
+    position: relative;
+    text-align: center; /* Center text within the sponsor options */
   }
 
   .options-text-wrapper {
-    position: absolute; /* Position text within each sponsor option */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Centering trick */
-    width: 90%; /* Adjusted width */
-    text-align: center; /* Center text */
+    width: 80%; /* Adjusted width for better text wrapping */
+    margin: 0 auto; /* Center text within options-text-wrapper */
   }
 
-  .sponsoroptions h4,
+  .sponsoroptions h4 {
+    margin: 10px 0px 20px;
+    margin-right: 39vw;
+  }
+
   .sponsoroptions p {
-    text-align: center; /* Center text on mobile */
-    margin-bottom: 10px; /* Add spacing between elements */
+    margin: 0; /* Remove default margin */
+    text-align: justify; /* Justify text for better readability */
+    margin-right: 10vw;
   }
 
-  /* Adjustments for buttons and their SVG icons */
   .sponsor-button {
-    padding: 0.8em 1.5em; /* Smaller padding for better mobile appearance */
-    display: block; /* Display buttons as block elements for stacking */
-    margin: 10px auto; /* Center buttons */
+    padding: 0.8em 1.5em;
+    display: inline-block;
+    margin: 15px 0;
+    margin-right: 39vw;
   }
 
   .sponsor-button svg {
-    vertical-align: middle; /* Center SVG icon vertically with text */
-    margin-left: 5px; /* Add spacing between text and icon */
+    vertical-align: middle;
+    margin-left: 5px;
   }
 }
+
 
 
 /* MEDIA QUERY FOR MOBILE */
