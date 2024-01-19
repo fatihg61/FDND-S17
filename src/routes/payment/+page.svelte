@@ -41,7 +41,7 @@
                     <p class="expcvv_text">Expiry</p>
                     <input type="date" class="inputbox" name="exp_date" id="exp_date" required />
                     <p class="expcvv_text2">CVV</p>
-                    <input type="password" class="inputbox" name="cvv" id="cvv" required />
+                    <input type="cc-csc" class="inputbox" name="cvv" id="cvv" required />
                 </div>
                 <p>Amount</p>
                 <div style="display: flex;">
