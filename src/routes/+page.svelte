@@ -4,75 +4,139 @@
 </script>
 
 <main>
+  <!-- Hero of the page -->
   <section id="hero1" class="hero">
     <div class="inner">
-      <h2 class="sponsorpage-span-h2">
+      <!-- Heading op the page -->
+      <h2 class="sponsorPage-Span-h2">
         Become a <span class="yellow">sponsor</span>
       </h2>
-      <a href="#sponsorpage">
-        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" fill="#ff0" height="50" viewBox="0 -960 960 960" width="50">
-          <path d="m480-320 160-160-56-56-64 64v-168h-80v168l-64-64-56 56 160 160Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+      <!-- P of the page -->
+      <p class="hero-Text">
+        Join us in our mission to empower dreams through soccer. Your support
+        will help us provide a brighter future for children in Brazil.
+      </p>
+      <!-- Arrow to the section -->
+      <a href="#sponsorPage">
+        <svg
+          class="arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#ff0"
+          height="50"
+          viewBox="0 -960 960 960"
+          width="50"
+        >
+          <title id="arrowTitle">Sponsor Page Arrow</title>
+          <path
+            d="m480-320 160-160-56-56-64 64v-168h-80v168l-64-64-56 56 160 160Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+          />
+          <desc id="arrowDesc">Arrow pointing to the sponsor page.</desc>
         </svg>
       </a>
     </div>
   </section>
 
-  <div class="sponsorpage-wrapper">
-    <div class="sponsoroptions material">
-      <svg width="100%" height="539" viewBox="0 0 1512 539" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sponsor Page Section -->
+  <div class="sponsorPage-Wrapper">
+    <!-- Material option -->
+    <div class="sponsorOptions Material">
+      <svg
+        width="425"
+        height="151"
+        viewBox="0 0 1513 539"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path d="M1513 0 0 69.428v406.284L1513 539V0Z" fill="#FFDA1D" />
+        <path
+          d="M84 142.097c0-8.139 6.49-14.793 14.627-14.995l1316.003-32.72c8.42-.21 15.37 6.565 15.37 14.996V431.46c0 8.492-7.04 15.291-15.53 14.991l-1316-46.535c-8.073-.285-14.47-6.913-14.47-14.99V142.097Z"
+          fill="#FFE356"
+        />
       </svg>
-      <div class="options-text-wrapper">
-        <h4 class="black">MATERIAL</h4>
+      <!-- P of the option -->
+      <div class="options-Text-Wrapper">
+        <h3 class="black">MATERIAL</h3>
         <p class="black">
-          Sponsor football materials, change the Game! Your generous donation can provide crucial equipment to aspiring athletes. <br />
+          Sponsor football materials, change the Game! Your generous donation
+          can provide crucial equipment to aspiring athletes. <br />
           Help us make a difference today.
         </p>
         <a href="/payment">
-          <button class="sponsor-button sponsor-page-button green">
+          <!-- Button -->
+          <button class="sponsor-Button Sponsor-Page-Button green">
             Choose sponsor
           </button>
         </a>
       </div>
     </div>
 
-    <div class="sponsoroptions financial">
-      <svg width="100%" height="530" viewBox="0 0 1512 530" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M-5 0L1536 68.2689V467.769L-5 530V0Z" fill="#3DBAE1" />
+    <!-- Material Financial -->
+    <div class="sponsorOptions Financial">
+      <svg
+        width="1541"
+        height="530"
+        viewBox="0 0 1541 530"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0L1541 68.2689V467.769L0 530V0Z" fill="#3DBAE1" />
+        <path
+          d="M1434 143.097C1434 134.958 1427.51 128.304 1419.37 128.102L103.373 95.3822C94.9452 95.1727 88 101.947 88 110.378V432.46C88 440.952 95.0433 447.751 103.53 447.451L1419.53 400.916C1427.6 400.631 1434 394.004 1434 385.926V143.097Z"
+          fill="#1980A0"
+        />
       </svg>
-      <div class="options-text-wrapper">
-        <h4>FINANCIAL</h4>
+      <!-- P of the option -->
+      <div class="options-Text-Wrapper">
+        <h3>FINANCIAL</h3>
         <p>
-          Support Financially, Empower Dreams! Your generous donation can provide vital financial support to individuals in need. <br />
+          Support Financially, Empower Dreams! Your generous donation can
+          provide vital financial support to individuals in need. <br />
           Help us make a difference today
         </p>
         <a href="/payment">
-          <button class="sponsor-button sponsor-page-button">
+          <!-- Button -->
+          <button class="sponsor-Button Sponsor-Page-Button">
             Choose sponsor
           </button>
         </a>
       </div>
     </div>
 
-    <div class="sponsoroptions clothing">
-      <svg width="100%" height="557" viewBox="0 0 1508 557" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1508 0L-5 71.7468V491.598L1508 557V0Z" fill="#163A3A" />
+    <!-- Material Clothing -->
+    <div class="sponsorOptions Clothing">
+      <svg
+        width="1513"
+        height="557"
+        viewBox="0 0 1513 557"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1513 0L3.8147e-06 71.7468V491.598L1513 557V0Z"
+          fill="#163A3A"
+        />
+        <path
+          d="M88 158.097C88 149.958 94.4907 143.304 102.627 143.102L1418.63 110.382C1427.05 110.173 1434 116.947 1434 125.378V447.46C1434 455.952 1426.96 462.751 1418.47 462.451L102.47 415.916C94.3971 415.631 88 409.003 88 400.926V158.097Z"
+          fill="#1F4F4F"
+        />
       </svg>
-      <div class="options-text-wrapper">
-        <h4>CLOTHING</h4>
+      <!-- P of the option -->
+      <div class="options-Text-Wrapper">
+        <h3>CLOTHING</h3>
         <p>
-          Sponsor clothing, transform Lives! Your generous donation can provide essential clothing to those in need.<br />
+          Sponsor clothing, transform Lives! Your generous donation can provide
+          essential clothing to those in need.<br />
           Help us make a difference today.
         </p>
         <a href="/payment">
-          <button class="sponsor-button sponsor-page-button">
+          <!-- Button -->
+          <button class="sponsor-Button Sponsor-Page-Button">
             Choose sponsor
           </button>
         </a>
       </div>
     </div>
   </div>
-
 </main>
 
 <style>
@@ -82,103 +146,113 @@
     margin: 0;
     padding: 0;
   }
-
+  /* Hero section */
   section {
     padding: 0 6em;
     overflow: hidden;
   }
-
+  /* Arrow */
   .arrow {
-    fill: var(--candelLight);
+    fill: var(--Yellow-Primary);
   }
-
+  /* H2 */
   h2 {
-    font-family: var(--paragraph-font);
+    font-family: var(--Header-Font);
     font-size: 5.5em;
-    color: var(--justWhite);
+    color: var(--White);
   }
 
-  .sponsorpage-span-h2 {
+  .sponsorPage-Span-h2 {
     margin-top: 4em;
   }
-
+  /* P */
   p {
-    font-family: var(--copy-font);
+    font-family: var(--Apercu-Font);
     font-size: 1em;
-    color: var(--justWhite);
+    color: var(--White);
   }
 
+  .hero-Text {
+    font-family: var(--Apercu-Font);
+    font-size: 2em;
+    color: var(--White);
+  }
+  /* span color */
   .yellow {
-    color: var(--candelLight);
+    color: var(--Yellow-Primary);
   }
-
-  .sponsorpage-wrapper {
+  /* Sponsorpage wrapper */
+  .sponsorPage-Wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
   }
-
-  .sponsoroptions {
+  /* Sponsoroptions */
+  .sponsorOptions {
     position: relative;
   }
-
-  .material svg,
-  .financial svg,
-  .clothing svg {
+  /* Sponsor SVG p */
+  .Material svg,
+  .Financial svg,
+  .Clothing svg {
     position: relative;
     width: 100%;
     height: auto;
   }
-
-  .options-text-wrapper {
+  /* Sponsoroptions p */
+  .options-Text-Wrapper {
     position: absolute;
-    top: 20%;
-    left: 18%;
-    width: 60%;
+    top: 17%;
+    left: 8%;
+    width: 80%;
   }
-
-  h4 {
+  /* Sponsoroptions h3 */
+  h3 {
     font-size: 2em;
-    font-family: var(--paragraph-font);
+    font-family: var(--Paragraph-Font);
     margin-bottom: 1em;
+    margin-top: 2em;
   }
-
-  .sponsor-button {
+  /* Sponsor button */
+  .sponsor-Button {
     text-decoration: none;
-    color: var(--charcoal);
-    background-color: var(--candelLight);
-    font-family: var(--copy-font);
+    color: var(--Charcoal);
+    background-color: var(--Yellow-Primary);
+    font-family: var(--Apercu-Font);
     font-weight: bold;
     border: none;
     border-radius: 3em;
     padding: 1em 2em;
     text-transform: uppercase;
-    transition: .2s;
+    transition: 0.2s;
     cursor: pointer;
+    margin-bottom: 3em;
   }
 
-  .sponsor-button:hover {
-    background-color: var(--button-hover-color);
-    color: var(--charcoal);
+  .sponsor-Button:hover {
+    background-color: var(--White);
+    color: var(--Charcoal);
   }
 
-  .sponsor-page-button {
+  .Sponsor-Page-Button {
     z-index: 3;
-    margin-top: 9%;
+    margin-top: 10%;
+    margin-right: -1%;
+    float: right;
   }
 
   .black {
-    color: var(--charcoal);
+    color: var(--Charcoal);
   }
 
   .green {
-    background-color: var(--justWhite);
-    color: var(--charcoal);
+    background-color: var(--White);
+    color: var(--Charcoal);
   }
 
   .green:hover {
-    background-color: var(--pictonBlue);
-    color: var(--justWhite);
+    background-color: var(--Blue-Secondary);
+    color: var(--White);
   }
 
   *,
@@ -188,12 +262,13 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-
+  /* Hero background */
   #hero1 {
-    background-image: url("brasilvoetbalveld.png");
+    background-image: url("/assets/brasilvoetbalveld.webp");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    margin-bottom: -10%;
   }
 
   .hero {
@@ -205,6 +280,118 @@
   .inner {
     min-height: 600px;
     position: relative;
+  }
+
+  /* For 1440p screens and above */
+  @media only screen and (min-width: 1440px) and (max-width: 2559px) {
+    .options-Text-Wrapper {
+      top: 17%;
+    }
+    .Sponsor-Page-Button {
+      margin-top: -1%;
+    }
+  }
+
+  /* For 1024p screens */
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .options-Text-Wrapper {
+      top: 7%;
+    }
+    .Sponsor-Page-Button {
+      margin-top: 0%;
+    }
+  }
+
+  /* For 768p screens */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .options-Text-Wrapper {
+      top: 4%;
+      width: 80%;
+    }
+    p {
+      margin-right: 10em;
+      margin-top: -1em;
+    }
+    .Sponsor-Page-Button {
+      margin-top: -10%;
+    }
+  }
+
+  /* For 593p screens */
+  @media only screen and (min-width: 593px) and (max-width: 768px) {
+    .options-Text-Wrapper {
+      top: -6%;
+      width: 80%;
+    }
+    p {
+      margin-right: 10em;
+      margin-top: -1em;
+    }
+    .Sponsor-Page-Button {
+      margin-top: -14%;
+    }
+  }
+
+  /* For 425p screens */
+  @media only screen and (min-width: 500px) and (max-width: 593px) {
+    .options-Text-Wrapper {
+      top: 4%;
+      width: 80%;
+    }
+    p {
+      visibility: hidden;
+    }
+    .Sponsor-Page-Button {
+      margin-top: -32%;
+    }
+  }
+
+  /* For 425p screens */
+  @media only screen and (min-width: 425px) and (max-width: 500px) {
+    .options-Text-Wrapper {
+      top: 4%;
+      width: 80%;
+    }
+    p {
+      visibility: hidden;
+    }
+    .Sponsor-Page-Button {
+      margin-top: -46%;
+    }
+  }
+
+  /* For 375 screens and below */
+  @media only screen and (max-width: 424px) {
+    .options-Text-Wrapper {
+      top: -23%;
+      width: 80%;
+    }
+    p {
+      visibility: hidden;
+    }
+    .Sponsor-Page-Button {
+      margin-top: -46%;
+      padding: 13px 3px;
+    }
+  }
+
+  /* For 375 screens and below */
+  @media only screen and (max-width: 320px) {
+    .options-Text-Wrapper {
+      top: -13%;
+      width: 80%;
+    }
+    p {
+      visibility: hidden;
+    }
+    .Sponsor-Page-Button {
+      margin-top: -58%;
+      padding: 13px 3px;
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -221,42 +408,8 @@
       font-size: 3em; /* Adjust font size for smaller screens */
     }
 
-    .sponsorpage-span-h2 {
+    .sponsorPage-Span-h2 {
       margin-top: 6em; /* Adjust margin for smaller screens */
-    }
-
-    .options-text-wrapper {
-      top: 15%; /* Adjust position for smaller screens */
-      left: 5%; /* Adjust position for smaller screens */
-      width: 90%; /* Adjust width for smaller screens */
-    }
-
-    p {
-      font-size: 0.9em; /* Adjust font size for smaller screens */
-    }
-
-    h4 {
-      font-size: 1.5em; /* Adjust font size for smaller screens */
-      margin-bottom: 0.5em; /* Adjust margin for smaller screens */
-    }
-
-    .sponsor-button {
-      padding: 0.8em 1.5em; /* Adjust padding for smaller screens */
-    }
-
-    .sponsor-page-button {
-      margin-top: 4%; /* Adjust margin for smaller screens */
-    }
-
-    .sponsoroptions {
-      margin-bottom: 2em; /* Add margin between sponsor options for smaller screens */
-    }
-
-    .material svg,
-    .financial svg,
-    .clothing svg {
-      width: 100%; /* Adjust width for smaller screens */
-      height: auto; /* Maintain aspect ratio for SVG on smaller screens */
     }
   }
 </style>
