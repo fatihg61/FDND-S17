@@ -4,6 +4,7 @@
 <main>
   <div class="modal">
     <form class="form">
+        <p>Fast Payment</p>
       <div class="paymentother">
         <button name="apple-pay" type="button">
           <svg
@@ -114,6 +115,17 @@
             />
           </div>
         </div>
+        <div class="input_container">
+            <label class="input_label">Donation Type / Amount</label>
+            <div class="split">
+              <input
+                class="input_field"
+                style="width: 110px;"
+                type="number"
+                placeholder="Amount"
+              />
+            </div>
+          </div>
       </div>
       <button class="checkout" style="cursor: pointer;">
         <span>Checkout</span>
@@ -128,7 +140,7 @@
   main {
     height: 100vh;
     overflow: hidden;
-    background: var(--White);
+    background: #5F5D5D;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,7 +148,13 @@
   }
 
   body {
-    background: var(--White);
+    background: #5F5D5D;
+  }
+
+  p {
+    font-size: 12px;
+    color: #575760;
+    font-weight: 600;
   }
 
   .modal {
@@ -177,12 +195,20 @@
   .paymentother button:last-child svg {
     height: 22px;
   }
+
+  .paymentother button:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+  .paymentother button:active {
+    transform: scale(0.95);
+  }
+
   .separator {
     width: calc(100% - 20px);
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     gap: 10px;
-    color: #8b8e98;
+    color: #575760;
     margin: 0 10px;
   }
   .separator p {
@@ -221,7 +247,7 @@
   }
   .input_label {
     font-size: 12px;
-    color: #8b8e98;
+    color: #575760;
     font-weight: 600;
   }
   .input_field {
