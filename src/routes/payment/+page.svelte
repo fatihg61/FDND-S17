@@ -4,9 +4,10 @@
 <main>
   <div class="modal">
     <form class="form">
-        <p>Fast Payment</p>
       <div class="paymentother">
-        <button name="apple-pay" type="button">
+        <p>Fast Payment</p>
+        <br>
+        <button name="apple-pay" type="button" style="cursor: pointer;">
           <svg
             xml:space="preserve"
             viewBox="0 0 512 210.2"
@@ -23,7 +24,7 @@
             ></path>
           </svg>
         </button>
-        <button name="google-pay" type="button">
+        <button name="google-pay" type="button" style="cursor: pointer;">
           <svg
             fill="none"
             viewBox="0 0 80 39"
@@ -120,9 +121,15 @@
             <div class="split">
               <input
                 class="input_field"
+                style="width: 250px;"
+                type="text"
+                placeholder="Material / Financial / Clothing"
+              />
+              <input
+                class="input_field"
                 style="width: 110px;"
                 type="number"
-                placeholder="Amount"
+                placeholder="$"
               />
             </div>
           </div>
@@ -136,9 +143,10 @@
 </body>
 
 <style>
+    
   @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap");
   main {
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     background: #5F5D5D;
     display: flex;
@@ -177,7 +185,7 @@
   .paymentother {
     display: grid;
     grid-template-columns: 50% 50%;
-    gap: 20px;
+    gap: 5px;
     padding: 10px;
     justify-content: center;
   }
