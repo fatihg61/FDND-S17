@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="INK" content="Charity for INK brasil.">
-		<link rel="icon" href="%sveltekit.assets%/ink.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-		<title>INK</title>
-		<meta http-equiv="X-Content-Type-Options" content="nosniff">
-		<meta http-equiv="X-Frame-Options" content="deny">
-		<meta http-equiv="X-XSS-Protection" content="1; mode=block">
-		<link rel="stylesheet" href="/">
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="INK" content="Charity for INK brasil." />
+  <meta name="description" content="INK Donation">
+  <link rel="icon" href="%sveltekit.assets%/ink.png" />
+  <meta name="viewport" content="width=device-width" />
+  %sveltekit.head%
+  <title>INK</title>
+
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="deny" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+  <link rel="stylesheet" href="/" integrity="sha256-8e20eb1909361d059dbdf371ce71937d572722be50eeab3f41eebb3fc1cdc63c" crossorigin="anonymous">  <script>
+    // Script to generate the hash for inline styles (if needed)
+    function generateHash(content) {
+      const hash = crypto.subtle.digest('SHA-256', new TextEncoder().encode(content));
+      return Array.from(new Uint8Array(hash))
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('');
+    }
+  </script>
+</head>
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">%sveltekit.body%</div>
+</body>
 </html>
