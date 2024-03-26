@@ -3,87 +3,55 @@
         setTimeout(() => window.location.href = "/", 5000);
 </script>
   
-<main class="payment-success">
-    <div class="container">
-      <div class="heading">
-        <div class="tick-container">
-          <i class="tick fas fa-check-circle text-green"></i>
-        </div>
-        <span class="heading-text">Your payment is successful!</span>
-      </div>
-
-      <div class="text-container">
-        <p>You will be logged out of all devices except this one.</p>
-        <p>You will be redirected to the website in 5 seconds.</p>
-        <p>If you are not redirected, click the button below.</p>
-
-        <a href="/" class="primary-button button">Go to Website</a>
-      </div>
-    </div>
-
-  </main>
+<main>
+  <h1>Thanks for your Donation! Please wait for the redirection</h1>
+  <div class="loader loader--style2" title="1">
+    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+    <path fill="#000" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+      <animateTransform attributeType="xml"
+        attributeName="transform"
+        type="rotate"
+        from="0 25 25"
+        to="360 25 25"
+        dur="0.6s"
+        repeatCount="indefinite"/>
+      </path>
+    </svg>
+  </div>
+</main>
   
 <style>
-main {
-    background-color: #2196f3;    
-}
-
-.payment-success {
-  background-color: #2196f3;
-  color: #fff;
+main{
+  padding: 1em;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Gill sans", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+h1{
+  margin: 1em 0;
+  border-bottom: 1px dashed;
+  padding-bottom: 1em;
+  font-weight: lighter;
 }
 
-.container {
-  padding: 32px 0 48px;
+.loader{
+  margin: 0 0 2em;
+  height: 100px;
+  width: 20%;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto 1em;
+  display: inline-block;
+  vertical-align: top;
 }
 
-.heading {
-  font-size: 2.4rem;
-  margin-bottom: 32px;
+/*
+  Set the color of the icon
+*/
+svg path
+{
+  fill: var(--Yellow-Primary);
 }
-
-.heading-text {
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-left: 16px;
-}
-
-.tick-container {
-  padding: 24px;
-  border-radius: 50px;
-  height: 64px;
-  width: 64px;
-  background-color: #fff;
-  margin-bottom: 12px;
-}
-
-.tick {
-  display: block;
-  transform: rotate(45deg);
-  height: 36px;
-  width: 18px;
-  border-bottom: solid 6px #fff;
-  border-right: solid 6px #fff;
-  margin-bottom: 8px;
-}
-
-.text-container {
-  line-height: 1.8em;
-  margin-bottom: 48px;
-}
-
-.primary-button {
-  background-color: #fff;
-  color: #2196f3;
-  padding: 16px 32px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
 </style>

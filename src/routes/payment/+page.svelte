@@ -1,154 +1,185 @@
 <script>
+  function handleFastPayButtonClick() {
+    window.location.href = "/paymentgood";
+  }
+
+  function handleCVVInput(event) {
+    if (event.target.value.length > 3) {
+      event.target.value = event.target.value.slice(0, 3);
+    }
+}
 </script>
+
 <body>
-<main>
-  <div class="modal">
-    <form class="form">
-      <div class="paymentother">
-        <p>Fast Payment</p>
-        <br>
-        <button name="apple-pay" type="button" style="cursor: pointer;">
-          <svg
-            xml:space="preserve"
-            viewBox="0 0 512 210.2"
-            y="0px"
-            x="0px"
-            id="Layer_1"
-            version="1.1"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns="http://www.w3.org/2000/svg"
+  <main>
+    <div class="formfield">
+      <form class="form">
+        <div class="payment_other">
+          <p>Fast Payment</p>
+          <br />
+          <button
+            name="apple-pay"
+            on:click={handleFastPayButtonClick}
+            type="button"
+            style="cursor: pointer;"
           >
-            <path
-              d="M93.6,27.1C87.6,34.2,78,39.8,68.4,39c-1.2-9.6,3.5-19.8,9-26.1c6-7.3,16.5-12.5,25-12.9  C103.4,10,99.5,19.8,93.6,27.1 M102.3,40.9c-13.9-0.8-25.8,7.9-32.4,7.9c-6.7,0-16.8-7.5-27.8-7.3c-14.3,0.2-27.6,8.3-34.9,21.2  c-15,25.8-3.9,64,10.6,85c7.1,10.4,15.6,21.8,26.8,21.4c10.6-0.4,14.8-6.9,27.6-6.9c12.9,0,16.6,6.9,27.8,6.7  c11.6-0.2,18.9-10.4,26-20.8c8.1-11.8,11.4-23.3,11.6-23.9c-0.2-0.2-22.4-8.7-22.6-34.3c-0.2-21.4,17.5-31.6,18.3-32.2  C123.3,42.9,107.7,41.3,102.3,40.9 M182.6,11.9v155.9h24.2v-53.3h33.5c30.6,0,52.1-21,52.1-51.4c0-30.4-21.1-51.2-51.3-51.2H182.6z   M206.8,32.3h27.9c21,0,33,11.2,33,30.9c0,19.7-12,31-33.1,31h-27.8V32.3z M336.6,169c15.2,0,29.3-7.7,35.7-19.9h0.5v18.7h22.4V90.2  c0-22.5-18-37-45.7-37c-25.7,0-44.7,14.7-45.4,34.9h21.8c1.8-9.6,10.7-15.9,22.9-15.9c14.8,0,23.1,6.9,23.1,19.6v8.6l-30.2,1.8  c-28.1,1.7-43.3,13.2-43.3,33.2C298.4,155.6,314.1,169,336.6,169z M343.1,150.5c-12.9,0-21.1-6.2-21.1-15.7c0-9.8,7.9-15.5,23-16.4  l26.9-1.7v8.8C371.9,140.1,359.5,150.5,343.1,150.5z M425.1,210.2c23.6,0,34.7-9,44.4-36.3L512,54.7h-24.6l-28.5,92.1h-0.5  l-28.5-92.1h-25.3l41,113.5l-2.2,6.9c-3.7,11.7-9.7,16.2-20.4,16.2c-1.9,0-5.6-0.2-7.1-0.4v18.7C417.3,210,423.3,210.2,425.1,210.2z"
-              id="XMLID_34_"
-            ></path>
-          </svg>
-        </button>
-        <button name="google-pay" type="button" style="cursor: pointer;">
-          <svg
-            fill="none"
-            viewBox="0 0 80 39"
-            height="39"
-            width="80"
-            xmlns="http://www.w3.org/2000/svg"
+            <svg
+              xml:space="preserve"
+              viewBox="0 0 512 210.2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M93.6 27.1C87.6 34.2 78 39.8 68.4 39c-1.2-9.6 3.5-19.8 9-26.1 6-7.3 16.5-12.5 25-12.9 1 10-2.9 19.8-8.8 27.1m8.7 13.8c-13.9-.8-25.8 7.9-32.4 7.9-6.7 0-16.8-7.5-27.8-7.3-14.3.2-27.6 8.3-34.9 21.2-15 25.8-3.9 64 10.6 85 7.1 10.4 15.6 21.8 26.8 21.4 10.6-.4 14.8-6.9 27.6-6.9 12.9 0 16.6 6.9 27.8 6.7 11.6-.2 18.9-10.4 26-20.8 8.1-11.8 11.4-23.3 11.6-23.9-.2-.2-22.4-8.7-22.6-34.3-.2-21.4 17.5-31.6 18.3-32.2-10-14.8-25.6-16.4-31-16.8m80.3-29v155.9h24.2v-53.3h33.5c30.6 0 52.1-21 52.1-51.4s-21.1-51.2-51.3-51.2zm24.2 20.4h27.9c21 0 33 11.2 33 30.9s-12 31-33.1 31h-27.8zM336.6 169c15.2 0 29.3-7.7 35.7-19.9h.5v18.7h22.4V90.2c0-22.5-18-37-45.7-37-25.7 0-44.7 14.7-45.4 34.9h21.8c1.8-9.6 10.7-15.9 22.9-15.9 14.8 0 23.1 6.9 23.1 19.6v8.6l-30.2 1.8c-28.1 1.7-43.3 13.2-43.3 33.2 0 20.2 15.7 33.6 38.2 33.6m6.5-18.5c-12.9 0-21.1-6.2-21.1-15.7 0-9.8 7.9-15.5 23-16.4l26.9-1.7v8.8c0 14.6-12.4 25-28.8 25m82 59.7c23.6 0 34.7-9 44.4-36.3L512 54.7h-24.6l-28.5 92.1h-.5l-28.5-92.1h-25.3l41 113.5-2.2 6.9c-3.7 11.7-9.7 16.2-20.4 16.2-1.9 0-5.6-.2-7.1-.4v18.7c1.4.4 7.4.6 9.2.6"
+              />
+            </svg>
+          </button>
+          <button
+            name="google-pay"
+            on:click={handleFastPayButtonClick}
+            type="button"
+            style="cursor: pointer;"
           >
-            <g clip-path="url(#clip0_134_34)">
-              <path
-                fill="#5F6368"
-                d="M37.8 19.7V29H34.8V6H42.6C44.5 6 46.3001 6.7 47.7001 8C49.1001 9.2 49.8 11 49.8 12.9C49.8 14.8 49.1001 16.5 47.7001 17.8C46.3001 19.1 44.6 19.8 42.6 19.8L37.8 19.7ZM37.8 8.8V16.8H42.8C43.9 16.8 45.0001 16.4 45.7001 15.6C47.3001 14.1 47.3 11.6 45.8 10.1L45.7001 10C44.9001 9.2 43.9 8.7 42.8 8.8H37.8Z"
-              >
-              </path>
-              <path
-                fill="#5F6368"
-                d="M56.7001 12.8C58.9001 12.8 60.6001 13.4 61.9001 14.6C63.2001 15.8 63.8 17.4 63.8 19.4V29H61V26.8H60.9001C59.7001 28.6 58 29.5 56 29.5C54.3 29.5 52.8 29 51.6 28C50.5 27 49.8 25.6 49.8 24.1C49.8 22.5 50.4 21.2 51.6 20.2C52.8 19.2 54.5 18.8 56.5 18.8C58.3 18.8 59.7 19.1 60.8 19.8V19.1C60.8 18.1 60.4 17.1 59.6 16.5C58.8 15.8 57.8001 15.4 56.7001 15.4C55.0001 15.4 53.7 16.1 52.8 17.5L50.2001 15.9C51.8001 13.8 53.9001 12.8 56.7001 12.8ZM52.9001 24.2C52.9001 25 53.3001 25.7 53.9001 26.1C54.6001 26.6 55.4001 26.9 56.2001 26.9C57.4001 26.9 58.6 26.4 59.5 25.5C60.5 24.6 61 23.5 61 22.3C60.1 21.6 58.8 21.2 57.1 21.2C55.9 21.2 54.9 21.5 54.1 22.1C53.3 22.6 52.9001 23.3 52.9001 24.2Z"
-              >
-              </path>
-              <path
-                fill="#5F6368"
-                d="M80 13.3L70.1 36H67.1L70.8 28.1L64.3 13.4H67.5L72.2 24.7H72.3L76.9 13.4H80V13.3Z"
-              >
-              </path>
-              <path
-                fill="#4285F4"
-                d="M25.9 17.7C25.9 16.8 25.8 15.9 25.7 15H13.2V20.1H20.3C20 21.7 19.1 23.2 17.7 24.1V27.4H22C24.5 25.1 25.9 21.7 25.9 17.7Z"
-              >
-              </path>
-              <path
-                fill="#34A853"
-                d="M13.1999 30.5999C16.7999 30.5999 19.7999 29.3999 21.9999 27.3999L17.6999 24.0999C16.4999 24.8999 14.9999 25.3999 13.1999 25.3999C9.7999 25.3999 6.7999 23.0999 5.7999 19.8999H1.3999V23.2999C3.6999 27.7999 8.1999 30.5999 13.1999 30.5999Z"
-              >
-              </path>
-              <path
-                fill="#FBBC04"
-                d="M5.8001 19.8999C5.2001 18.2999 5.2001 16.4999 5.8001 14.7999V11.3999H1.4001C-0.499902 15.0999 -0.499902 19.4999 1.4001 23.2999L5.8001 19.8999Z"
-              >
-              </path>
-              <path
-                fill="#EA4335"
-                d="M13.2 9.39996C15.1 9.39996 16.9 10.1 18.3 11.4L22.1 7.59996C19.7 5.39996 16.5 4.09996 13.3 4.19996C8.3 4.19996 3.7 6.99996 1.5 11.5L5.9 14.9C6.8 11.7 9.8 9.39996 13.2 9.39996Z"
-              >
-              </path>
-            </g>
-            <defs>
-              <clipPath id="clip0_134_34">
-                <rect fill="white" height="38.1" width="80"></rect>
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
-      </div>
-      <div class="separator">
-        <hr class="line" />
-        <p>OR</p>
-        <hr class="line" />
-      </div>
-      <div class="card-info">
-        <div class="input_container">
-          <label class="input_label">Card holder name</label>
-          <input
-            class="input_field"
-            type="text"
-            placeholder="Enter your full name"
-          />
+            <svg
+              fill="none"
+              viewBox="0 0 80 39"
+              height="39"
+              width="80"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#a)">
+                <path
+                  fill="#5F6368"
+                  d="M37.8 19.7V29h-3V6h7.8c1.9 0 3.7.7 5.1 2 1.4 1.2 2.1 3 2.1 4.9s-.7 3.6-2.1 4.9-3.1 2-5.1 2zm0-10.9v8h5c1.1 0 2.2-.4 2.9-1.2 1.6-1.5 1.6-4 .1-5.5l-.1-.1c-.8-.8-1.8-1.3-2.9-1.2zm18.9 4c2.2 0 3.9.6 5.2 1.8s1.9 2.8 1.9 4.8V29H61v-2.2h-.1c-1.2 1.8-2.9 2.7-4.9 2.7-1.7 0-3.2-.5-4.4-1.5-1.1-1-1.8-2.4-1.8-3.9q0-2.4 1.8-3.9c1.2-1 2.9-1.4 4.9-1.4 1.8 0 3.2.3 4.3 1v-.7c0-1-.4-2-1.2-2.6-.8-.7-1.8-1.1-2.9-1.1q-2.55 0-3.9 2.1l-2.6-1.6c1.6-2.1 3.7-3.1 6.5-3.1m-3.8 11.4c0 .8.4 1.5 1 1.9.7.5 1.5.8 2.3.8 1.2 0 2.4-.5 3.3-1.4 1-.9 1.5-2 1.5-3.2-.9-.7-2.2-1.1-3.9-1.1q-1.8 0-3 .9-1.2.75-1.2 2.1M80 13.3 70.1 36h-3l3.7-7.9-6.5-14.7h3.2l4.7 11.3h.1l4.6-11.3H80z"
+                />
+                <path
+                  fill="#4285F4"
+                  d="M25.9 17.7c0-.9-.1-1.8-.2-2.7H13.2v5.1h7.1c-.3 1.6-1.2 3.1-2.6 4v3.3H22c2.5-2.3 3.9-5.7 3.9-9.7"
+                />
+                <path
+                  fill="#34A853"
+                  d="M13.2 30.6c3.6 0 6.6-1.2 8.8-3.2l-4.3-3.3c-1.2.8-2.7 1.3-4.5 1.3-3.4 0-6.4-2.3-7.4-5.5H1.4v3.4c2.3 4.5 6.8 7.3 11.8 7.3"
+                />
+                <path
+                  fill="#FBBC04"
+                  d="M5.8 19.9c-.6-1.6-.6-3.4 0-5.1v-3.4H1.4c-1.9 3.7-1.9 8.1 0 11.9z"
+                />
+                <path
+                  fill="#EA4335"
+                  d="M13.2 9.4c1.9 0 3.7.7 5.1 2l3.8-3.8c-2.4-2.2-5.6-3.5-8.8-3.4-5 0-9.6 2.8-11.8 7.3l4.4 3.4c.9-3.2 3.9-5.5 7.3-5.5"
+                />
+              </g>
+              <defs>
+                <clipPath id="a">
+                  <path fill="#fff" d="M0 0h80v38.1H0z" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
         </div>
-        <div class="input_container">
-          <label class="input_label">Card Number</label>
-          <input
-            class="input_field"
-            type="number"
-            placeholder="0000 0000 0000 0000"
-          />
+        <div class="separator">
+          <hr class="line" />
+          <p>OR</p>
+          <hr class="line" />
         </div>
-        <div class="input_container">
-          <label class="input_label">Expiry Date / CVV</label>
-          <div class="split">
-            <input
-              class="input_field"
-              style="width: 250px;"
-              type="text"
-              placeholder="01/23"
-            />
-            <input
-              class="input_field"
-              style="width: 110px;"
-              type="number"
-              placeholder="CVV"
-            />
-          </div>
-        </div>
-        <div class="input_container">
-            <label class="input_label">Donation Type / Amount</label>
-            <div class="split">
+            <div class="card-info"> 
+              <div class="input_container">
+              <label class="input_label" for="cardHolderName">Cardholder Name</label>
               <input
+                id="cardHolderName"
                 class="input_field"
-                style="width: 250px;"
                 type="text"
-                placeholder="Material / Financial / Clothing"
+                name="cardHolderName"
+                placeholder="Enter your full name"
+                maxlength="50"
+                required
+                autocomplete="name"
               />
-              <input
-                class="input_field"
-                style="width: 110px;"
-                type="number"
-                placeholder="$"
-              />
+              <div class="input_container">
+                <label class="input_label" for="cardNumber">Card Number</label>
+                <input
+                  id="cardNumber"
+                  class="input_field"
+                  type="text"
+                  name="cardNumber"
+                  placeholder="0000 0000 0000 0000"
+                  pattern="[0-9]{16}"
+                  maxlength="16"
+                  required
+                  autocomplete="cc-number"
+                />
+              </div>
+              <div class="input_container">
+                <label class="input_label" for="expiryDate">Expiry Date</label>
+                <div class="split"></div>
+                <input
+                  id="expiryDate"
+                  class="input_field"
+                  type="month"
+                  name="expiryDate"
+                  placeholder="MM/YYYY"
+                  min="2023-03"
+                  max="2034-12"
+                  style="width: 250px;"
+                  required
+                  autocomplete="cc-exp"
+                />
+              </div>
+              <div class="input_container">
+                <label class="input_label" for="cvv">CVV</label>
+                <input
+                  id="cvv"
+                  class="input_field"
+                  type="password"
+                  name="cvv"
+                  placeholder="CVV"
+                  maxlength="3"
+                  autocomplete="cc-csc"
+                  on:input={handleCVVInput}
+                />
+              </div>
+              <div class="input_container">
+                <label class="input_label" for="donationType">Donation Type</label>
+                <div class="split">
+                  <select
+                    id="donationType"
+                    class="input_field"
+                    style="width: 250px;"
+                    autocomplete="donation-type"
+                  >
+                    <option value="">Select donation type</option>
+                    <option value="material">Material</option>
+                    <option value="financial">Financial</option>
+                    <option value="clothing">Clothing</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input_container">
+                <label class="input_label" for="donationAmount">Donation Amount</label>
+                <input
+                  id="donationAmount"
+                  class="input_field"
+                  type="number"
+                  name="donationAmount"
+                  placeholder="$"
+                  min="1"
+                  required
+                />
+              </div>
+              <a href="/paymentgood" class="checkout" style="cursor: pointer;">
+                <span>Checkout</span>
+              </a>
             </div>
-          </div>
-      </div>
-      <button class="checkout" style="cursor: pointer;">
-        <span>Checkout</span>
-      </button>
-    </form>
-  </div>
-</main>
+        </form>
+    </div>
+  </main>
 </body>
 
 <style>
-    
   @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap");
   main {
     height: 80vh;
     overflow: hidden;
-    background: #5F5D5D;
+    background: #5f5d5d;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,7 +187,7 @@
   }
 
   body {
-    background: #5F5D5D;
+    background: #5f5d5d;
   }
 
   p {
@@ -165,7 +196,7 @@
     font-weight: 600;
   }
 
-  .modal {
+  .formfield {
     background: #ffffff;
     box-shadow:
       0px 187px 75px rgba(0, 0, 0, 0.01),
@@ -179,17 +210,17 @@
   .form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     padding: 20px;
   }
-  .paymentother {
+  .payment_other {
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 5px;
     padding: 10px;
     justify-content: center;
   }
-  .paymentother button {
+  .payment_other button {
     height: 55px;
     background: #f2f2f2;
     border-radius: 11px;
@@ -197,17 +228,17 @@
     border: 0;
     outline: none;
   }
-  .paymentother button svg {
+  .payment_other button svg {
     height: 18px;
   }
-  .paymentother button:last-child svg {
+  .payment_other button:last-child svg {
     height: 22px;
   }
 
-  .paymentother button:hover::before {
+  .payment_other button:hover::before {
     transform: translate3d(100%, 0, 0);
   }
-  .paymentother button:active {
+  .payment_other button:active {
     transform: scale(0.95);
   }
 
@@ -236,23 +267,21 @@
   .card-info {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
   .input_container {
     width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
   }
   .split {
     display: grid;
     grid-template-columns: 4fr 2fr;
-    gap: 15px;
+    gap: 10px;
   }
-  .split input {
-    width: 100%;
-  }
+
   .input_label {
     font-size: 12px;
     color: #575760;
@@ -297,6 +326,7 @@
     display: inline-flex;
     align-items: center;
     padding: 0.8em 1.2em 0.8em 1.05em;
+    margin-left: 30%;
   }
   .checkout::before,
   .checkout::after {
