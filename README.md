@@ -39,14 +39,8 @@ You can preview the production build with `npm run preview`.
 
 Bronnen:
 
-Bubblegum: https://css-tricks.com/making-css-animations-feel-natural/
+Hoorcollege CS
 
-Blackbox: https://g.co/bard/share/710eef920f8d writed the code for ballpit
+DLO CS
 
-Codepen: for inspiration https://codepen.io/search/pens?q=ballpit
-
-Google: For the moodboard
-
-Pinterest: For the moodboard
-
-FDND: Talks for Creative coding
+FDND
